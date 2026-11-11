@@ -1,8 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 long long nwd(long long a, long long b){
     long long helper;
-
+    a = llabs(a);
+    b = llabs(b);
     if (b > a) {
         helper = a;
         a = b;
@@ -16,6 +18,10 @@ long long nwd(long long a, long long b){
     return a;
 }
 
+long long nww(long long a, long long b){
+    return llabs(a) * (llabs(b) / nwd(a, b));
+}
+
 int main(){
     long long m, n;
 
@@ -24,7 +30,12 @@ int main(){
     printf("Input integer n:\t");
     scanf("%lld", &n);
 
-    printf("\n NWD: %lld", nwd(m, n));
+    if (m == 0 && n == 0) {
+        printf("\nCannot compute with two zeroes");
+    }else{
+        printf("\nNWD: %lld", nwd(m, n));
+        printf("\nNWW: %lld", nww(m, n));
+    }
     
     return 0;
 }
