@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 void heron(long double to_root, int root, int steps){
-    printf("\n\nBeginning heron:\n");
     long double starting_point, power_helper;
+    
+    printf("\n\nBeginning heron:\n");
     
     if (starting_point * starting_point <= 2) {
         starting_point = 1.0;
@@ -29,6 +30,7 @@ int main(){
         scanf("%d", &root);
         printf("\nHow many steps?\t");
         scanf("%d", &steps);
+        
         heron(to_root, root, steps);
 
         printf("\nGo again?[0/1]\t");
