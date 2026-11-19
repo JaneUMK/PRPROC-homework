@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+//technicznie rzecz biorąc jest to metoda Newtona/Newtona-Raphsona - heron jest jej przypadkiem dla pierwiastków drugiego stopnia
 void heron(long double to_root, int root, int steps){
     long double starting_point, power_helper;
     
