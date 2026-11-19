@@ -6,7 +6,7 @@ void heron(long double to_root, int root, int steps){
     
     printf("\n\nBeginning heron:\n");
     
-    if (starting_point * starting_point <= 2) {
+    if (to_root * to_root <= 2) {
         starting_point = 1.0;
     } else starting_point = to_root/2.0;
 
